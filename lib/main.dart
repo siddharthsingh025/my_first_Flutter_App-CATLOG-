@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/pages/Login_Page.dart';
+import 'package:my_app/utilities/routes.dart';
 
 
 import 'pages/Homepage.dart';
@@ -25,8 +26,8 @@ darkTheme: ThemeData(
 
 routes:{
 "/":(context)=> LoginPage(),
-"/home":(context)=> HomePage(),
-"/login":(context)=> LoginPage(),
+MyRoutes.homeRoutes:(context)=> HomePage(),
+MyRoutes.loginRoutes:(context)=> LoginPage(),
 
 },
   );
