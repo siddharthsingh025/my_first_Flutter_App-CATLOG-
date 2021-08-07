@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/pages/Login_Page.dart';
 import 'package:my_app/utilities/routes.dart';
+import 'package:my_app/wedgit/theme.dart';
 
 
 import 'pages/Homepage.dart';
@@ -17,13 +18,10 @@ Widget build(BuildContext context){
   return MaterialApp(
 
 themeMode:ThemeMode.light,
-theme:ThemeData(primarySwatch:Colors.deepPurple,
-
-),
-darkTheme: ThemeData(
-  brightness: Brightness.dark,
-),
-
+theme:MyTheme.lighTheme(context),
+darkTheme: MyTheme.darkTheme(context),
+debugShowCheckedModeBanner: false,
+ initialRoute: MyRoutes.homeRoutes,
 routes:{
 "/":(context)=> LoginPage(),
 MyRoutes.homeRoutes:(context)=> HomePage(),

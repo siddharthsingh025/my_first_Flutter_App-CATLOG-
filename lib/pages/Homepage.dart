@@ -1,6 +1,8 @@
 
 
 import'package:flutter/material.dart';
+import 'package:my_app/wedgit/drawer.dart';
+
 
 class HomePage extends StatelessWidget{
   final int day=20;
@@ -11,7 +13,7 @@ Widget build(BuildContext context){
   return Scaffold(
 appBar: AppBar( 
   title: Text("Catlog App"),
-  backgroundColor: Colors.blue,
+  
 
 ),
 body: Center(
@@ -21,7 +23,7 @@ body: Center(
     child: Text("Welcome to $day th birthday of $name"),
 ),
 ),
-drawer: Drawer()
+drawer: MyDrawer(),
   );
 
 
