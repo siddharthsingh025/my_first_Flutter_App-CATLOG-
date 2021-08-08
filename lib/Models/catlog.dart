@@ -1,3 +1,18 @@
+class CatalogModel{
+
+  static  List<Item> items =[
+Item(
+id: 1,
+name: "iPhone 12 pro",
+desc: "Apple iPhone 12th generation",
+price: 999,
+color: "#33505a",
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc",
+
+)
+
+  ];
+}
 
 class  Item {
 
@@ -5,29 +20,38 @@ class  Item {
   final String name;
   final String desc;
   final num price;
-  final String colour;
+  final String color;
   final String image;
 
-  Item({ required this.id, required this.name, required this.desc, required this.price, required this.colour, required this.image});
-}
+  Item({ required this.id, required this.name, required this.desc, required this.price, required this.color, required this.image});
+
+    factory Item.fromMap(Map<String,dynamic>map){
+      return Item(
+
+        id: map["id"],
+        name: map["name"],
+        desc: map["desc"],
+        price: map["price"],
+        color: map["color"],
+        image: map["image"],
+      );
+
+   }
+
+   toMap() => {
+"id": id,
+"name": name,
+"desc": desc,
+"color": color,
+"image": image,
+
+   };
+
+  }
 
 
 
-class CatalogModel{
 
-  static final Items =[
-Item(
-id: 1,
-name: "iPhone 12 pro",
-desc: "Apple iPhone 12th generation",
-price: 999,
-colour: "#33505a",
-image:"https://m.media-amazon.com/images/I/71MHTD3uL4L._SL1500_.jpg",
-
-)
-
-  ];
-}
 
 
 
