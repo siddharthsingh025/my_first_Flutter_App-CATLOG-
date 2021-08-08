@@ -28,6 +28,7 @@ class _HomePageState extends State<HomePage> {
 
   loadData()
    async {
+    //  await Future.delayed(Duration(seconds: 2));
     final catalogjson =  await  rootBundle.loadString("Assets/files/Catalog.json");
       final decodeData = jsonDecode(catalogjson);
        var productsData = decodeData["products"];
@@ -49,13 +50,46 @@ appBar: AppBar(
 ),
 body: Padding(
   padding: const EdgeInsets.all(17.0),
-  child:   ListView.builder(
-    itemCount:CatalogModel.items.length ,
+  child: (CatalogModel.items!=null && CatalogModel.items.isNotEmpty) 
+  ? GridView.builder(
+    gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
+      crossAxisCount: 2,
+      crossAxisSpacing: 16,
+      mainAxisSpacing: 16,
+      ) ,
+    
     itemBuilder: (context, index){
-      return ItemWidget(
-        item: CatalogModel.items[index],
-      );
-    },),
+      final item =CatalogModel.items[index];
+      return Card(
+        clipBehavior: Clip.antiAlias,
+        shape:  RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(11)),
+        child: GridTile(
+          header: Container(
+
+            child: Text(item.name,style: TextStyle(color: Colors.white),),
+            padding:  const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: Colors.deepOrange
+            ),),
+          child: Image.network(item.image),
+          footer: Container(
+            child: Text(item.price.toString(),
+            style: TextStyle(color: Colors.white),),
+             padding:  const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: Colors.black
+
+           ), ),
+          
+          )
+          );
+    }, 
+    
+    itemCount:CatalogModel.items.length ,
+    )
+:Center(
+  child: CircularProgressIndicator(),)
 ),
 drawer: MyDrawer(),
   );
