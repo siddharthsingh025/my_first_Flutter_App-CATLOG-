@@ -28,6 +28,8 @@ static ThemeData darkTheme(BuildContext context) =>ThemeData(
   static Color darkBluishColor = Color(0xff403b58);
 static Color LightgreenishColor = Color(0xFF00C853);
 static Color darkYellowishColor = Color(0xFFFB8C00);
+//font styles
+// orbitron()  sigmarOne()   monoton()
 
 }
 

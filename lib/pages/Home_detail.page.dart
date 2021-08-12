@@ -15,7 +15,9 @@ final  Item catalog;
   @override
   Widget build(BuildContext context){
   return Scaffold(
-    appBar: AppBar(),
+    appBar: AppBar(
+      backgroundColor: Colors.transparent,
+    ),
     backgroundColor: MyTheme.creamColor,
     bottomNavigationBar: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
@@ -30,8 +32,8 @@ final  Item catalog;
               )), 
             
             child:
-            "Buy".text.xl.make(), 
-            ).wh(100, 50),
+            "Add To Cart".text.xl.make(), 
+            ).wh(120, 50),
             
           ],
         ).p32(),
@@ -57,6 +59,7 @@ final  Item catalog;
                     catalog.name.text.bold.color(MyTheme.darkYellowishColor).xl4.make(),
         catalog.desc.text.lg.make(),
        10.heightBox,
+       "Eos est ipsum duo elitr sit ipsum consetetur. Lorem eirmod stet sed sadipscing et, erat sit amet aliquyam et kasd lorem at stet dolor, amet eos voluptua aliquyam amet invidunt sed. Sadipscing dolore et stet aliquyam duo, tempor ipsum sea consetetur accusam erat voluptua ea accusam ipsum. Accusam dolor nonumy.".text.color(Colors.black54).textStyle(GoogleFonts.actor()).make(),
                  ],
                ).p64(),
              )))

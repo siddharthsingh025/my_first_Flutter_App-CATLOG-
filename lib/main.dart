@@ -6,6 +6,7 @@ import 'package:my_app/widget/theme.dart';
 
 
 import 'pages/Homepage.dart';
+import 'pages/cart_page.dart';
 
 void main(){
   runApp(MyApp());
@@ -27,6 +28,7 @@ routes:{
 "/":(context)=> LoginPage(),
 MyRoutes.homeRoutes:(context)=> HomePage(),
 MyRoutes.loginRoutes:(context)=> LoginPage(),
+MyRoutes.cartRoute:(context)=> CartPage(),
 
 },
   );

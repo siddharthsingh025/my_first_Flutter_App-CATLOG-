@@ -70,7 +70,7 @@ child: Row(
               )), 
             
             child:
-            "Buy".text.make(), 
+            "Add To Cart".text.make(), 
             )
             
           ],

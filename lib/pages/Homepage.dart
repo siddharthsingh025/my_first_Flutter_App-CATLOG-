@@ -2,7 +2,9 @@
 
 import 'dart:convert';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
+import 'package:my_app/utilities/routes.dart';
 import 'package:my_app/widget/Homepage_widgets/Catalog_List.dart';
 import 'package:my_app/widget/Homepage_widgets/Catalog_header.dart';
 
@@ -50,6 +52,10 @@ Widget build(BuildContext context){
   return Scaffold(
   
 backgroundColor: MyTheme.creamColor,
+floatingActionButton: FloatingActionButton(
+  backgroundColor: MyTheme.darkYellowishColor,
+  onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+  child: Icon(CupertinoIcons.cart,) ,),
 body: 
 SafeArea(
   child:   Container(
