@@ -11,10 +11,10 @@ static ThemeData lighTheme(BuildContext context) =>ThemeData(
   primarySwatch:Colors.deepOrange,
   cardColor: Colors.white,
    canvasColor: creamColor,
-   buttonColor: darkYellowishColor,
+   buttonColor:Vx.green600,
    accentColor: darkYellowishColor, 
    hintColor:Colors.black54 ,
-   
+   // Vx.orange600
    
  fontFamily: GoogleFonts.acme().fontFamily,
   appBarTheme: AppBarTheme(

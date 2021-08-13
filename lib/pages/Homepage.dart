@@ -52,7 +52,7 @@ Widget build(BuildContext context){
   return Scaffold(
 backgroundColor: context.canvasColor,
 floatingActionButton: FloatingActionButton(
-  backgroundColor: context.theme.buttonColor,
+  backgroundColor: MyTheme.darkYellowishColor,
   onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
   child: Icon(CupertinoIcons.cart,color: Colors.white,) ,),
 body: 
