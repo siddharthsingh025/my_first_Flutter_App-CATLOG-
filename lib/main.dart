@@ -23,7 +23,7 @@ themeMode:ThemeMode.system,
 theme:MyTheme.lighTheme(context),
 darkTheme: MyTheme.darkTheme(context),
 debugShowCheckedModeBanner: false,
- initialRoute: MyRoutes.homeRoutes,
+  initialRoute: MyRoutes.homeRoutes,
 routes:{
 "/":(context)=> LoginPage(),
 MyRoutes.homeRoutes:(context)=> HomePage(),

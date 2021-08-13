@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
 
   loadData()
    async {
-    //  await Future.delayed(Duration(seconds: 8));
+     await Future.delayed(Duration(seconds: 2));
     final catalogjson =  await  rootBundle.loadString("Assets/files/Catalog.json");
       final decodeData = jsonDecode(catalogjson);
        var productsData = decodeData["products"];
@@ -67,7 +67,7 @@ SafeArea(
        if(CatalogModel.items!=null && CatalogModel.items.isNotEmpty)
       CatalogList().py16().expand()
       else
-      Center(child: CircularProgressIndicator(),)
+       CircularProgressIndicator().centered().expand()
 
       ],),
   ),
