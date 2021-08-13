@@ -18,25 +18,30 @@ final  Item catalog;
     appBar: AppBar(
       backgroundColor: Colors.transparent,
     ),
-    backgroundColor: MyTheme.creamColor,
-    bottomNavigationBar: ButtonBar(
-          alignment: MainAxisAlignment.spaceBetween,
+    backgroundColor: context.canvasColor,
+    bottomNavigationBar: Container(
+      color: context.cardColor,
+      child: ButtonBar(
+        
+            alignment: MainAxisAlignment.spaceBetween,
           
-          children: [
-            
-            "\$${catalog.price}".text.xl4.bold.color(MyTheme.darkBluishColor).make(),
-            ElevatedButton(onPressed: () {},
-            
-            style: ButtonStyle(
-              shape: MaterialStateProperty.all(StadiumBorder()
-              )), 
-            
-            child:
-            "Add To Cart".text.xl.make(), 
-            ).wh(120, 50),
-            
-          ],
-        ).p32(),
+            children: [
+              
+              "\$${catalog.price}".text.xl4.bold.color(Vx.red600).make(),
+              ElevatedButton(onPressed: () {},
+              
+              style: ButtonStyle(
+                shape: MaterialStateProperty.all(StadiumBorder()
+                )), 
+              
+              child:
+              "Add To Cart".text.xl.make(), 
+              ).wh(120, 50),
+              
+            ],
+          
+          ).p32(),
+    ),
     body: SafeArea(
       bottom: false,
       child: Column(
@@ -52,17 +57,19 @@ final  Item catalog;
                arcType: VxArcType.CONVEY,
                edge: VxEdge.TOP,
              child: Container(
-               color: Colors.white,
+               color: context.cardColor,
                width:context.screenWidth ,
                child: Column(
                  children: [
                     catalog.name.text.bold.color(MyTheme.darkYellowishColor).xl4.make(),
         catalog.desc.text.lg.make(),
        10.heightBox,
-       "Eos est ipsum duo elitr sit ipsum consetetur. Lorem eirmod stet sed sadipscing et, erat sit amet aliquyam et kasd lorem at stet dolor, amet eos voluptua aliquyam amet invidunt sed. Sadipscing dolore et stet aliquyam duo, tempor ipsum sea consetetur accusam erat voluptua ea accusam ipsum. Accusam dolor nonumy.".text.color(Colors.black54).textStyle(GoogleFonts.actor()).make(),
+       "Eos est ipsum duo elitr sit ipsum consetetur. Lorem eirmod stet sed sadipscing et, erat sit amet aliquyam et kasd lorem at stet dolor, amet eos voluptua aliquyam amet invidunt sed. Sadipscing dolore et stet aliquyam duo, tempor ipsum sea consetetur accusam erat voluptua ea accusam ipsum. Accusam dolor nonumy.".text.color(context.theme.hintColor).textStyle(GoogleFonts.actor()).make(),
                  ],
                ).p64(),
-             )))
+             ),
+             ),
+             ),
         ],
       ),
     ),

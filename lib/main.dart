@@ -19,7 +19,7 @@ Widget build(BuildContext context){
 
   return MaterialApp(
 
-themeMode:ThemeMode.light,
+themeMode:ThemeMode.system,
 theme:MyTheme.lighTheme(context),
 darkTheme: MyTheme.darkTheme(context),
 debugShowCheckedModeBanner: false,

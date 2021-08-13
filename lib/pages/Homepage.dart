@@ -50,15 +50,15 @@ class _HomePageState extends State<HomePage> {
 Widget build(BuildContext context){
   
   return Scaffold(
-  
-backgroundColor: MyTheme.creamColor,
+backgroundColor: context.canvasColor,
 floatingActionButton: FloatingActionButton(
-  backgroundColor: MyTheme.darkYellowishColor,
+  backgroundColor: context.theme.buttonColor,
   onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
-  child: Icon(CupertinoIcons.cart,) ,),
+  child: Icon(CupertinoIcons.cart,color: Colors.white,) ,),
 body: 
 SafeArea(
   child:   Container(
+   
     padding: Vx.m32,
     child:   Column(
       crossAxisAlignment: CrossAxisAlignment.start,
